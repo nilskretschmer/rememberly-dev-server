@@ -46,7 +46,7 @@ At the moment there are no restrictions for clients to create a user on their ow
 6. Open up your domain and you should see a welcome page.
 
 ## Usage
-The API offers basic endpoints for user services and to access the API's. Take a look inside the /src/routes.php file for a complete overview of possible endpoints.
+The API offers basic endpoints for user services and to access stored data (notes/todolists). Take a look inside the /src/routes.php file for a complete overview of possible endpoints. Most of the endpoints require data from the client. This can be JSON in the HTML body or URL query parameters.
 Some examples:
 - Login route (GET: /login):
 This endpoint requires login via username/password (HTTP Basic Authentication) and returns an API token for the specified user to access the API with the users permissions.
