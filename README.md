@@ -4,7 +4,7 @@ This REST API privdes endpoints to create, modify, retrieve, delete and to share
 
 ## Warnings
 
-At the moment there are no restrictions for clients to create a user on their own so be careful in production use.
+At the moment there are no restrictions for clients to create a user on their own so be careful in production use. This software is not 100% tested and should be used carefully in production.
 
 ## Installation
 
