@@ -15,6 +15,9 @@ class CreateTodolistsTable extends Migration
     {
         Schema::create('todolists', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('owner');
+            $table->foreign('owner')->references('id')->on('users');
+            $table->string('title');
             $table->timestamps();
         });
     }

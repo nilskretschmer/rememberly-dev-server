@@ -15,6 +15,9 @@ class CreateTodoItemsTable extends Migration
     {
         Schema::create('todo_items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('todolist_id');
+            $table->foreign('todolist_id')->references('id')->on('todolists');
+            $table->boolean('completed')->default(false);
             $table->timestamps();
         });
     }
