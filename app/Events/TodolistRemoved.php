@@ -7,10 +7,11 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class TodolistUpdated
+class TodolistRemoved implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -33,6 +34,10 @@ class TodolistUpdated
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('todolist' . $this->todolist->owner);
+        return new PrivateChannel('todolist.' . $this->todolist->owner);
+    }
+
+    public function broadcastAs() {
+        return 'todolist-removed';
     }
 }

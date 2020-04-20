@@ -1,6 +1,6 @@
 let getters = {
     newTodolist: state => {
-        return state.newTododolist
+        return state.newTodolist
     },
     todolists: state => {
         return state.todolists

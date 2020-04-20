@@ -17,6 +17,7 @@ class CreateTodoItemsTable extends Migration
             $table->id();
             $table->foreignId('todolist_id');
             $table->foreign('todolist_id')->references('id')->on('todolists');
+            $table->string('todo_text', 100);
             $table->boolean('completed')->default(false);
             $table->timestamps();
         });

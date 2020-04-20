@@ -1,13 +1,11 @@
-<template>
-  <div>
-    <p>Test</p>
-  </div>
-</template>
+    //../resources/js/components/Todolist.vue
+    <template>
+    <li>{{ todolist.title }} {{ todolist.updated_at }}</li>
+    </template>
 
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
+    <script>
+       export default {
+          props: ['todolist']
+       }
+
+    </script>

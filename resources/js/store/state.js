@@ -2,7 +2,7 @@ let state = {
     todolists: [],
     todolistToRemove: null,
     newTodolist: {
-        title: ''
+        title: 'Test'
     }
 }
 export default state

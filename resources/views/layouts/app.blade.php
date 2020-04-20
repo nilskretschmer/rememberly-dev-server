@@ -76,6 +76,6 @@
             @yield('content')
         </main>
     </div>
-     @include('bottom_navigation')
+     @include('navigation.bottom_navigation')
 </body>
 </html>

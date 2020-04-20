@@ -1,11 +1,11 @@
 let mutations = {
     ADD_TODOLIST(state, todolist) {
-        state.todolists.unshift(todolist)
+        state.todolists.push(todolist)
     },
     CACHE_REMOVED(state, todolist) {
       state.todolistToRemove = todolist;
     },
-    GET_TODOS(state, todolists) {
+    GET_TODOLISTS(state, todolists) {
         state.todolists = todolists
     },
     DELETE_TODO(state, todolists) {

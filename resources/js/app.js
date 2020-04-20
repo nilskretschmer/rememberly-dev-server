@@ -20,8 +20,29 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('new-todolist', require('./components/NewTodolist.vue').default);
 Vue.component('todolist', require('./components/Todolist.vue').default);
-Vue.component('todo-item', require('./components/TodoItem.vue').default);
+Vue.component('todolist-container', require('./components/TodolistContainer.vue').default);
+//Vue.component('todo-item', require('./components/TodoItem.vue').default);
+Vue.component('rememberly-app', require('./components/RememberlyApp').default);
+
+// passport
+Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue').default
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue').default
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue').default
+);
+
+import store from '../js/store';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,4 +52,5 @@ Vue.component('todo-item', require('./components/TodoItem.vue').default);
 
 const app = new Vue({
     el: '#app',
+    store
 });
